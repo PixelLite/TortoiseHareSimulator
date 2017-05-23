@@ -34,14 +34,20 @@ namespace Tortoise_Hare_Simulation
             Colour = Color.OrangeRed;
         }
         //need second constructor
-        public Contender()
+        public Contender(int position, int numbersteps, Color c)
         {
-
+            setiPosition(position);
+            setiNumberSteps(numbersteps);
+            setColour(c);
         }
            
 
         public void setiNumberSteps(int steps)
         {
+            if (steps <= 0)
+                throw (new FormatException());
+
+            else
             iNumberSteps = steps;
         }
         public int GetiNumberSteps ()
@@ -49,13 +55,23 @@ namespace Tortoise_Hare_Simulation
             return iNumberSteps;
         }
 
-        public void setColour(Color setcolour)
+        public void setColour(Color c)
         {
-            Colour = setcolour;
+            Colour = c;
         }
         public Color GetColour()
         {
             return Colour;
+        }
+        public void setiPosition(int p)
+        {
+            if (p < 0)
+                throw (new FormatException());
+            
+            else
+            iPosition = p;
+            
+
         }
         public int GetiPosition()
         {
@@ -73,6 +89,10 @@ namespace Tortoise_Hare_Simulation
     }
     public class Tortoise: Contender
     {
+        public void UpdatePosition()
+        {
+
+        }
 
     }
 
