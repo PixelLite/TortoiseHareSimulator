@@ -38,7 +38,13 @@ namespace Tortoise_Hare_Simulation
         {
 
         }
-           
+
+        public Contender(Contender clone)
+        {
+            iPosition = clone.iPosition;
+            iNumberSteps = clone.iNumberSteps;
+            Colour = clone.Colour;
+        }
 
         public void setiNumberSteps(int steps)
         {
@@ -74,6 +80,12 @@ namespace Tortoise_Hare_Simulation
     public class Tortoise: Contender
     {
 
+    }
+
+    public class Hare : Contender
+    {
+        //type type type
+        //poo
     }
 
 }
