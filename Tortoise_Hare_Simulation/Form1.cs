@@ -70,7 +70,7 @@ namespace Tortoise_Hare_Simulation
             public void setiPosition(int p)
             {
                 if (p < 0)
-                    throw (new FormatException());
+                    iPosition=0;
 
                 else
                     iPosition = p;
@@ -83,7 +83,7 @@ namespace Tortoise_Hare_Simulation
             }
             public bool IsWinner()
             {
-                if (iPosition == iNumberSteps)
+                if (iPosition >= iNumberSteps)
                     return true;
                 else
                     return false;
