@@ -22,12 +22,12 @@ namespace Tortoise_Hare_Simulation
 
         public class Contender
         {
-            protected int iPosition;
             //position # of contender
-            protected int iNumberSteps;
+            protected int iPosition;
             //number of steps in the race
+            protected int iNumberSteps;
+            //color of contender
             protected Color Colour;
-            //colour of contender
 
             //constructors
             public Contender()
@@ -62,6 +62,7 @@ namespace Tortoise_Hare_Simulation
             {
                 return iNumberSteps;
             }
+
             public void setColour(Color c)
             {
                 Colour = c;
@@ -70,6 +71,7 @@ namespace Tortoise_Hare_Simulation
             {
                 return Colour;
             }
+
             public void setiPosition(int p)
             {
                 if (p < 0)
@@ -84,6 +86,7 @@ namespace Tortoise_Hare_Simulation
             {
                 return iPosition;
             }
+
             public bool IsWinner()
             {
                 if (iPosition >= iNumberSteps)
@@ -97,10 +100,14 @@ namespace Tortoise_Hare_Simulation
 
         public class Tortoise : Contender
         {
-            Random rndgen;
+
+            Random r=new Random();
             
-            public void UpdatePosition(int iPercentage)
+            public void UpdatePosition()
             {
+                //rnd number upto 100
+                int iPercentage = r.Next(100);
+
                 if (iPercentage < 50) 
                 {
                     //Fast plod
