@@ -17,6 +17,9 @@ namespace Tortoise_Hare_Simulation
             InitializeComponent();
         }
 
+        Tortoise T = new Tortoise();
+        Hare H = new Hare();
+
         public class Contender
         {
             protected int iPosition;
@@ -112,8 +115,8 @@ namespace Tortoise_Hare_Simulation
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            Hare.Draw(e.Graphics);
-            //Tortoise.Draw(e.Graphics);
+            H.Draw(e.Graphics);
+            //T.Draw(e.Graphics);
         }
     }
 
