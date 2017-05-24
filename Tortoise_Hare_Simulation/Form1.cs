@@ -73,7 +73,7 @@ namespace Tortoise_Hare_Simulation
             public void setiPosition(int p)
             {
                 if (p < 0)
-                    throw (new FormatException());
+                    iPosition=0;
 
                 else
                     iPosition = p;
@@ -86,7 +86,7 @@ namespace Tortoise_Hare_Simulation
             }
             public bool IsWinner()
             {
-                if (iPosition == iNumberSteps)
+                if (iPosition >= iNumberSteps)
                     return true;
                 else
                     return false;
@@ -97,9 +97,20 @@ namespace Tortoise_Hare_Simulation
 
         public class Tortoise : Contender
         {
-            public void UpdatePosition()
+            public void UpdatePosition(int iPercentage)
             {
-
+                if (iPercentage < 50) 
+                {
+                    //Fast plod
+                }
+                else if (iPercentage >=50 && iPercentage < 70) 
+                {
+                    //Slip
+                }
+                else
+                {
+                    //slow plod
+                }
             }
 
             public void Draw(Graphics g)
@@ -111,10 +122,9 @@ namespace Tortoise_Hare_Simulation
 
         public class Hare : Contender
         {
-            public void Draw(Graphics g)
+            public void Draw(Graphics e)
             {
-                SolidBrush myBrush = new SolidBrush(Colour);
-                //g.FillRectangle(myBrush);
+
             }
         }
 
