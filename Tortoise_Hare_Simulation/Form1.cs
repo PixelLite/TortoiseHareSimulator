@@ -110,14 +110,17 @@ namespace Tortoise_Hare_Simulation
 
                 if (iPercentage < 50) 
                 {
+                    //fast plod
                     setiPosition(iPosition + 3);
                 }
                 else if (iPercentage >=50 && iPercentage < 70) 
                 {
+                    //slip
                     setiPosition(iPosition - 6);
                 }
                 else
                 {
+                    //slow plod
                     setiPosition(iPosition + 1);
                 }
             }
