@@ -166,7 +166,7 @@ namespace Tortoise_Hare_Simulation
                 }
             }
 
-            public void Draw(Graphics e)
+            public void Draw(Graphics g)
             {
                 SolidBrush myBrush = new SolidBrush(Colour);
                 g.FillRectangle(myBrush, iPosition * 5, 175, 15, 15);
