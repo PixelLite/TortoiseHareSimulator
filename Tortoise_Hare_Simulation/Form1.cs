@@ -26,21 +26,19 @@ namespace Tortoise_Hare_Simulation
             protected Color Colour;
             //colour of contender
 
-                //constructors
+            //constructors
             public Contender()
             {
                 iPosition = 0;
                 iNumberSteps = 70;
                 Colour = Color.OrangeRed;
             }
-            
             public Contender(int position, int numbersteps, Color c)
             {
                 setiPosition(position);
                 setiNumberSteps(numbersteps);
                 setColour(c);
             }
-
             public Contender(Contender clone)
             {
                 iPosition = clone.iPosition;
@@ -72,10 +70,11 @@ namespace Tortoise_Hare_Simulation
             public void setiPosition(int p)
             {
                 if (p < 0)
-                    iPosition = 0;
+                    throw (new FormatException());
 
                 else
                     iPosition = p;
+
 
             }
             public int GetiPosition()
@@ -84,7 +83,7 @@ namespace Tortoise_Hare_Simulation
             }
             public bool IsWinner()
             {
-                if (iPosition >= iNumberSteps)
+                if (iPosition == iNumberSteps)
                     return true;
                 else
                     return false;
@@ -92,9 +91,9 @@ namespace Tortoise_Hare_Simulation
             }
 
         }
+
         public class Tortoise : Contender
         {
-            
             public void UpdatePosition()
             {
 
@@ -104,8 +103,20 @@ namespace Tortoise_Hare_Simulation
 
         public class Hare : Contender
         {
-
+            public void Draw(Graphics g)
+            {
+                SolidBrush myBrush = new SolidBrush(Colour);
+                //g.FillRectangle(myBrush);
+            }
         }
 
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            Hare.Draw(e.Graphics);
+            //Tortoise.Draw(e.Graphics);
+        }
     }
+
+    
+
 }
