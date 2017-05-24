@@ -93,9 +93,21 @@ namespace Tortoise_Hare_Simulation
         }
 
     }
-    public class Tortoise: Contender
+    public class Tortoise : Contender
     {
+        public Tortoise()
+        {
+
+        }
+        public Tortoise()
+        {
+
+        }
         public void UpdatePosition()
+        {
+
+        }
+        public void Draw()
         {
 
         }
