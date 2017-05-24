@@ -73,10 +73,11 @@ namespace Tortoise_Hare_Simulation
         public void setiPosition(int p)
         {
             if (p < 0)
-                throw (new FormatException());
-            
+                iPosition = 0;
+
+
             else
-            iPosition = p;
+                iPosition = p;
             
 
         }
@@ -86,7 +87,7 @@ namespace Tortoise_Hare_Simulation
         }
         public bool IsWinner()
         {
-            if (iPosition == iNumberSteps)
+            if (iPosition >= iNumberSteps)
                 return true;
             else
                 return false;
@@ -96,6 +97,9 @@ namespace Tortoise_Hare_Simulation
     }
     public class Tortoise: Contender
     {
+        Random rndgen;
+
+
         public void UpdatePosition()
         {
 
