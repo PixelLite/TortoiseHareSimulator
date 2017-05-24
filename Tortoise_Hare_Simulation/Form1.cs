@@ -100,6 +100,7 @@ namespace Tortoise_Hare_Simulation
 
         public class Tortoise : Contender
         {
+
             Random r=new Random();
             
             public void UpdatePosition()
@@ -130,6 +131,8 @@ namespace Tortoise_Hare_Simulation
 
         public class Hare : Contender
         {
+            
+
             public void Draw(Graphics e)
             {
 
