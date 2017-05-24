@@ -115,6 +115,11 @@ namespace Tortoise_Hare_Simulation
                 }
             }
 
+            public void Draw(Graphics g)
+            {
+                SolidBrush myBrush = new SolidBrush(Colour);
+                //g.FillEllipse(myBrush);
+            }
         }
 
         public class Hare : Contender
@@ -128,7 +133,7 @@ namespace Tortoise_Hare_Simulation
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             H.Draw(e.Graphics);
-            //T.Draw(e.Graphics);
+            T.Draw(e.Graphics);
         }
     }
 
