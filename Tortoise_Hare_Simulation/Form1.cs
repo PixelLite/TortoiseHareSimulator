@@ -100,7 +100,6 @@ namespace Tortoise_Hare_Simulation
 
         public class Tortoise : Contender
         {
-
             Random r=new Random();
             
             public void UpdatePosition()
@@ -125,17 +124,16 @@ namespace Tortoise_Hare_Simulation
             public void Draw(Graphics g)
             {
                 SolidBrush myBrush = new SolidBrush(Colour);
-                //g.FillEllipse(myBrush);
+                g.FillEllipse(myBrush, iPosition*5, 175, 15, 15);
             }
         }
 
         public class Hare : Contender
         {
-            
-
             public void Draw(Graphics e)
             {
-
+                SolidBrush myBrush = new SolidBrush(Colour);
+                g.FillRectangle(myBrush, iPosition*5, 175, 15, 15);
             }
         }
 
