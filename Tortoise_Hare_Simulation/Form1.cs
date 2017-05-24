@@ -103,9 +103,10 @@ namespace Tortoise_Hare_Simulation
 
         public class Hare : Contender
         {
-            public void Draw(Graphics e)
+            public void Draw(Graphics g)
             {
-
+                SolidBrush myBrush = new SolidBrush(Colour);
+                //g.FillRectangle(myBrush);
             }
         }
 
