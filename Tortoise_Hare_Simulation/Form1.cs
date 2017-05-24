@@ -16,100 +16,106 @@ namespace Tortoise_Hare_Simulation
         {
             InitializeComponent();
         }
-    }
 
-    public class Contender
-    {
-        protected int iPosition;
-        //position # of contender
-        protected int iNumberSteps;
-        //number of steps in the race
-        protected Color Colour;
-        //colour of contender
+        public class Contender
+        {
+            protected int iPosition;
+            //position # of contender
+            protected int iNumberSteps;
+            //number of steps in the race
+            protected Color Colour;
+            //colour of contender
 
-        public Contender()
-        {
-            iPosition = 0;
-            iNumberSteps = 70;
-            Colour = Color.OrangeRed;
-        }
-        //second constructor
-        public Contender(int position, int numbersteps, Color c)
-        {
-            setiPosition(position);
-            setiNumberSteps(numbersteps);
-            setColour(c);
-        }
-
-        //third constructor
-        public Contender(Contender clone)
-        {
-            iPosition = clone.iPosition;
-            iNumberSteps = clone.iNumberSteps;
-            Colour = clone.Colour;
-        }
-
-        public void setiNumberSteps(int steps)
-        {
-            if (steps <= 0)
-                throw (new FormatException());
-
-            else
-            iNumberSteps = steps;
-        }
-        public int GetiNumberSteps ()
-        {
-            return iNumberSteps;
-        }
-
-        public void setColour(Color c)
-        {
-            Colour = c;
-        }
-        public Color GetColour()
-        {
-            return Colour;
-        }
-        public void setiPosition(int p)
-        {
-            if (p < 0)
+            //constructors
+            public Contender()
+            {
                 iPosition = 0;
+                iNumberSteps = 70;
+                Colour = Color.OrangeRed;
+            }
+            public Contender(int position, int numbersteps, Color c)
+            {
+                setiPosition(position);
+                setiNumberSteps(numbersteps);
+                setColour(c);
+            }
+            public Contender(Contender clone)
+            {
+                iPosition = clone.iPosition;
+                iNumberSteps = clone.iNumberSteps;
+                Colour = clone.Colour;
+            }
 
 
-            else
-                iPosition = p;
-            
+            public void setiNumberSteps(int steps)
+            {
+                if (steps <= 0)
+                    throw (new FormatException());
+
+                else
+                    iNumberSteps = steps;
+            }
+            public int GetiNumberSteps()
+            {
+                return iNumberSteps;
+            }
+            public void setColour(Color c)
+            {
+                Colour = c;
+            }
+            public Color GetColour()
+            {
+                return Colour;
+            }
+            public void setiPosition(int p)
+            {
+                if (p < 0)
+                    throw (new FormatException());
+
+                else
+                    iPosition = p;
+
+
+            }
+            public int GetiPosition()
+            {
+                return iPosition;
+            }
+            public bool IsWinner()
+            {
+                if (iPosition == iNumberSteps)
+                    return true;
+                else
+                    return false;
+
+            }
 
         }
-        public int GetiPosition()
+
+        public class Tortoise : Contender
         {
-            return iPosition;
+            public void UpdatePosition()
+            {
+
+            }
+
         }
-        public bool IsWinner()
+
+        public class Hare : Contender
         {
-            if (iPosition >= iNumberSteps)
-                return true;
-            else
-                return false;
+            public void Draw(Graphics e)
+            {
 
+            }
         }
 
-    }
-    public class Tortoise: Contender
-    {
-        Random rndgen;
-
-
-        public void UpdatePosition()
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-
+            Hare.Draw(e.Graphics);
+            //Tortoise.Draw(e.Graphics);
         }
-
     }
 
-    public class Hare : Contender
-    {
-        
-    }
+    
 
 }
