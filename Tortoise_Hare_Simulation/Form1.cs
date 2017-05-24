@@ -134,7 +134,7 @@ namespace Tortoise_Hare_Simulation
             Random r = new Random();
             public void UpdatePosition()
             {
-                //rnd number upto 100
+                //rnd number up to 100
                 int iPercentage = r.Next(100);
 
                 if (iPercentage < 20)
