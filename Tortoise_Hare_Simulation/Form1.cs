@@ -97,10 +97,13 @@ namespace Tortoise_Hare_Simulation
 
         public class Tortoise : Contender
         {
-            Random rndgen;
+            Random r=new Random();
             
-            public void UpdatePosition(int iPercentage)
+            public void UpdatePosition()
             {
+                //rnd number upto 100
+                int iPercentage = r.Next(100);
+
                 if (iPercentage < 50) 
                 {
                     //Fast plod
