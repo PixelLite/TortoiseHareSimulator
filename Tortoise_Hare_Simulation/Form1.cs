@@ -26,25 +26,26 @@ namespace Tortoise_Hare_Simulation
             protected Color Colour;
             //colour of contender
 
-            //constructors
-            public Contender()
-            {
-                iPosition = 0;
-                iNumberSteps = 70;
-                Colour = Color.OrangeRed;
-            }
-            public Contender(int position, int numbersteps, Color c)
-            {
-                setiPosition(position);
-                setiNumberSteps(numbersteps);
-                setColour(c);
-            }
-            public Contender(Contender clone)
-            {
-                iPosition = clone.iPosition;
-                iNumberSteps = clone.iNumberSteps;
-                Colour = clone.Colour;
-            }
+        public Contender()
+        {
+            iPosition = 0;
+            iNumberSteps = 70;
+            Colour = Color.OrangeRed;
+        }
+        
+        public Contender(int position, int numbersteps, Color c)
+        {
+            setiPosition(position);
+            setiNumberSteps(numbersteps);
+            setColour(c);
+        }
+
+        public Contender(Contender clone)
+        {
+            iPosition = clone.iPosition;
+            iNumberSteps = clone.iNumberSteps;
+            Colour = clone.Colour;
+        }
 
 
             public void setiNumberSteps(int steps)
@@ -52,70 +53,57 @@ namespace Tortoise_Hare_Simulation
                 if (steps <= 0)
                     throw (new FormatException());
 
-                else
-                    iNumberSteps = steps;
-            }
-            public int GetiNumberSteps()
-            {
-                return iNumberSteps;
-            }
-            public void setColour(Color c)
-            {
-                Colour = c;
-            }
-            public Color GetColour()
-            {
-                return Colour;
-            }
-            public void setiPosition(int p)
-            {
-                if (p < 0)
-                    throw (new FormatException());
-
-                else
-                    iPosition = p;
-
-
-            }
-            public int GetiPosition()
-            {
-                return iPosition;
-            }
-            public bool IsWinner()
-            {
-                if (iPosition == iNumberSteps)
-                    return true;
-                else
-                    return false;
-
-            }
-
+            else
+            iNumberSteps = steps;
         }
-
-        public class Tortoise : Contender
+        public int GetiNumberSteps ()
         {
-            public void UpdatePosition()
-            {
+            return iNumberSteps;
+        }
+        public void setColour(Color c)
+        {
+            Colour = c;
+        }
+        public Color GetColour()
+        {
+            return Colour;
+        }
+        public void setiPosition(int p)
+        {
+            if (p < 0)
+                throw (new FormatException());
+            
+            else
+            iPosition = p;
+            
+
+        }
+        public int GetiPosition()
+        {
+            return iPosition;
+        }
+        public bool IsWinner()
+        {
+            if (iPosition == iNumberSteps)
+                return true;
+            else
+                return false;
 
             }
 
-        }
-
-        public class Hare : Contender
-        {
-            public void Draw(Graphics e)
-            {
-
-            }
-        }
-
-        private void pictureBox1_Paint(object sender, PaintEventArgs e)
-        {
-            Hare.Draw(e.Graphics);
-            //Tortoise.Draw(e.Graphics);
-        }
     }
+    public class Tortoise: Contender
+    {
+        public void UpdatePosition()
+        {
 
-    
+            }
+
+        }
+
+    public class Hare : Contender
+    {
+       
+    }
 
 }
