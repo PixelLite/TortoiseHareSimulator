@@ -132,11 +132,11 @@ namespace Tortoise_Hare_Simulation
 
         public class Hare : Contender
         {
-            Random RndPercentage;
+            Random r = new Random();
             public void UpdatePosition()
             {
-                RndPercentage = new Random();
-                int iPercentage = RndPercentage.Next(100);
+                //rnd number upto 100
+                int iPercentage = r.Next(100);
 
                 if (iPercentage < 20)
                 {
