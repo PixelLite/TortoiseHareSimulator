@@ -33,7 +33,7 @@ namespace Tortoise_Hare_Simulation
             iNumberSteps = 70;
             Colour = Color.OrangeRed;
         }
-        //need second constructor
+        //second constructor
         public Contender(int position, int numbersteps, Color c)
         {
             setiPosition(position);
@@ -41,6 +41,7 @@ namespace Tortoise_Hare_Simulation
             setColour(c);
         }
 
+        //third constructor
         public Contender(Contender clone)
         {
             iPosition = clone.iPosition;
@@ -104,8 +105,7 @@ namespace Tortoise_Hare_Simulation
 
     public class Hare : Contender
     {
-        //type type type
-        //poo
+        
     }
 
 }
