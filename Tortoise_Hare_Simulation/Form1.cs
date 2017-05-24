@@ -125,7 +125,7 @@ namespace Tortoise_Hare_Simulation
             public void Draw(Graphics g)
             {
                 SolidBrush myBrush = new SolidBrush(Colour);
-                //g.FillEllipse(myBrush);
+                g.FillEllipse(myBrush, iPosition * 5, 175, 15, 15);
             }
         }
 
