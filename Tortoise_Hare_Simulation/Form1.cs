@@ -103,6 +103,20 @@ namespace Tortoise_Hare_Simulation
 
             Random r=new Random();
             
+            public Tortoise()
+            {
+                iPosition = 0;
+                iNumberSteps = 70;
+                Colour = Color.OrangeRed;
+            }
+
+            public Tortoise(int position, int numbersteps, Color c)
+            {
+                setiPosition(position);
+                setiNumberSteps(numbersteps);
+                setColour(c);
+            }
+
             public void UpdatePosition()
             {
                 //rnd number upto 100
@@ -135,6 +149,21 @@ namespace Tortoise_Hare_Simulation
         public class Hare : Contender
         {
             Random r = new Random();
+
+            public Hare()
+            {
+                iPosition = 0;
+                iNumberSteps = 70;
+                Colour = Color.OrangeRed;
+            }
+
+            public Hare(int position, int numbersteps, Color c)
+            {
+                setiPosition(position);
+                setiNumberSteps(numbersteps);
+                setColour(c);
+            }
+
             public void UpdatePosition()
             {
                 //rnd number upto 100
