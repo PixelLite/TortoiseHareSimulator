@@ -131,7 +131,33 @@ namespace Tortoise_Hare_Simulation
 
         public class Hare : Contender
         {
-            
+            Random RndPercentage;
+            public void UpdatePosition()
+            {
+                RndPercentage = new Random();
+                int iPercentage = RndPercentage.Next(100);
+
+                if (iPercentage < 20)
+                {
+                    //Sleep
+                }
+                else if (iPercentage >= 20 && iPercentage < 40)
+                {
+                    //Big hop
+                }
+                else if (iPercentage >= 40 && iPercentage < 50)
+                {
+                    //Big slip
+                }
+                else if (iPercentage >= 50 && iPercentage < 80)
+                {
+                    //Small hop
+                }
+                else
+                {
+                    //small slip
+                }
+            }
 
             public void Draw(Graphics e)
             {
