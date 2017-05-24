@@ -97,6 +97,8 @@ namespace Tortoise_Hare_Simulation
 
         public class Tortoise : Contender
         {
+            Random rndgen;
+            
             public void UpdatePosition(int iPercentage)
             {
                 if (iPercentage < 50) 
