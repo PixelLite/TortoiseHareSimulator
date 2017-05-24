@@ -17,6 +17,9 @@ namespace Tortoise_Hare_Simulation
             InitializeComponent();
         }
 
+        Tortoise T = new Tortoise();
+        Hare H = new Hare();
+
         public class Contender
         {
             protected int iPosition;
@@ -94,26 +97,36 @@ namespace Tortoise_Hare_Simulation
 
         public class Tortoise : Contender
         {
-            public void UpdatePosition()
+            public void UpdatePosition(int iPercentage)
             {
-
+                if (iPercentage < 50) 
+                {
+                    //Fast plod
+                }
+                else if (iPercentage >=50 && iPercentage < 70) 
+                {
+                    //Slip
+                }
+                else
+                {
+                    //slow plod
+                }
             }
 
         }
 
         public class Hare : Contender
         {
-            public void Draw(Graphics g)
+            public void Draw(Graphics e)
             {
-                SolidBrush myBrush = new SolidBrush(Colour);
-                //g.FillRectangle(myBrush);
+
             }
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            Hare.Draw(e.Graphics);
-            //Tortoise.Draw(e.Graphics);
+            H.Draw(e.Graphics);
+            //T.Draw(e.Graphics);
         }
     }
 
