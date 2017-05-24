@@ -111,6 +111,7 @@ namespace Tortoise_Hare_Simulation
                 if (iPercentage < 50) 
                 {
                     //Fast plod
+                    
                 }
                 else if (iPercentage >=50 && iPercentage < 70) 
                 {
@@ -140,22 +141,28 @@ namespace Tortoise_Hare_Simulation
                 if (iPercentage < 20)
                 {
                     //Sleep
+                    setiPosition(iPosition);
                 }
                 else if (iPercentage >= 20 && iPercentage < 40)
                 {
                     //Big hop
+                    setiPosition(iPosition + 9);
                 }
                 else if (iPercentage >= 40 && iPercentage < 50)
                 {
                     //Big slip
+                    setiPosition(iPosition - 12);
+
                 }
                 else if (iPercentage >= 50 && iPercentage < 80)
                 {
                     //Small hop
+                    setiPosition(iPosition + 1);
                 }
                 else
                 {
                     //small slip
+                    setiPosition(iPosition - 2);
                 }
             }
 
