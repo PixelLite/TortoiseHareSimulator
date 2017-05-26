@@ -215,6 +215,7 @@ namespace Tortoise_Hare_Simulation
             float[] dashValues = { 15, 15, 15, 15 };
             myPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             e.Graphics.DrawLine(myPen, 0, 70, 1050, 70);
+
             H.Draw(e.Graphics);
             T.Draw(e.Graphics);
         }
