@@ -121,6 +121,7 @@ namespace Tortoise_Hare_Simulation
                 else
                     return false;
             }
+
             public bool DidYaBite (Contender Other )
             {
                 if (this.iPosition == Other.iPosition)
@@ -270,12 +271,12 @@ namespace Tortoise_Hare_Simulation
 
             if (T.DidYaBite(H) == true)
             {
+                //change message box to smt else
                 MessageBox.Show("OUCH");
 
             }
             
-            //winner not working yet
-            //only returns a bool value
+            
             if (T.IsWinner() == true && H.IsWinner() == true)
             {
                 timer.Stop();

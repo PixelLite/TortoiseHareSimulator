@@ -33,7 +33,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnStartRace = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.Tortoise = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tortoise)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -65,11 +67,20 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // Tortoise
+            // 
+            this.Tortoise.Location = new System.Drawing.Point(16, 131);
+            this.Tortoise.Name = "Tortoise";
+            this.Tortoise.Size = new System.Drawing.Size(30, 17);
+            this.Tortoise.TabIndex = 3;
+            this.Tortoise.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 219);
+            this.Controls.Add(this.Tortoise);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnStartRace);
             this.Controls.Add(this.pictureBox1);
@@ -77,6 +88,7 @@
             this.Text = "Tortoise and Hare Race";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tortoise)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,6 +99,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnStartRace;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.PictureBox Tortoise;
     }
 }
 
