@@ -274,8 +274,8 @@ namespace Tortoise_Hare_Simulation
         private void btnReset_Click(object sender, EventArgs e)
         {
             Reset();
-            timer.Stop();
             Invalidate();
+            timer.Stop();
         }
     }
 
