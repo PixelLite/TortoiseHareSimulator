@@ -246,7 +246,7 @@ namespace Tortoise_Hare_Simulation
         private void btnStartRace_Click(object sender, EventArgs e)
         {
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = (1000) * (1);              // Timer will tick every second
+            timer.Interval = (500) * (1);              // Timer will tick every second
             timer.Enabled = true;                       // Enable the timer
             timer.Start();                              // Start the timer
 
