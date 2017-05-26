@@ -109,6 +109,14 @@ namespace Tortoise_Hare_Simulation
                     return false;
 
             }
+            public bool DidYaBite (Contender Other )
+            {
+                if (this.iPosition == Other.iPosition)
+                    return true;
+                else
+                    return false;
+                
+            }
 
         }
 
@@ -248,6 +256,12 @@ namespace Tortoise_Hare_Simulation
             H.UpdatePosition();
             pictureBox1.Invalidate();
 
+            if (T.DidYaBite(H) == true)
+            {
+                MessageBox.Show("OUCH");
+
+            }
+            
             //winner not working yet
             //only returns a bool value
             if (T.IsWinner() == true && H.IsWinner() == true)
