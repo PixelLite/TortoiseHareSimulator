@@ -42,6 +42,8 @@ namespace Tortoise_Hare_Simulation
             protected int iNumberSteps;
             //color of contender
             protected Color Colour;
+            //counts # of wins
+            protected int iWinCount;
 
             //constructors
             public Contender()
@@ -100,16 +102,25 @@ namespace Tortoise_Hare_Simulation
             {
                 return iPosition;
             }
-
+            public void SetWinCount(int w)
+            {
+                iWinCount = w;
+            }
+            public int GetWinCount()
+            {
+                return iWinCount;
+            }
+            public void IncreaseWinCount()
+            {
+                iWinCount++;
+            }
             public bool IsWinner()
             {
                 if (iPosition >= iNumberSteps)
                     return true;
                 else
                     return false;
-
             }
-
         }
 
         public class Tortoise : Contender
@@ -257,11 +268,13 @@ namespace Tortoise_Hare_Simulation
             }
             else if (T.IsWinner()== true)
             {
+                T.IncreaseWinCount();
                 timer.Stop();
                 MessageBox.Show("TORTOISE WINS!!!!! YAY!!!!!");
             } 
             else if (H.IsWinner() == true)
             {
+                H.IncreaseWinCount();
                 timer.Stop();
                 MessageBox.Show("Hare wins. Booooo");
             }
@@ -276,6 +289,11 @@ namespace Tortoise_Hare_Simulation
             Reset();
             Invalidate();
             timer.Stop();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
