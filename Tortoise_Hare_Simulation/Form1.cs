@@ -12,11 +12,15 @@ namespace Tortoise_Hare_Simulation
 {
     public partial class Form1 : Form
     {
+        
+        
         public Form1()
         {
             InitializeComponent();
+            
         }
 
+        Timer timer = new Timer();
         Tortoise T = new Tortoise();
         Hare H = new Hare();
 
@@ -179,6 +183,30 @@ namespace Tortoise_Hare_Simulation
         {
             H.Draw(e.Graphics);
             T.Draw(e.Graphics);
+        }
+
+        
+
+        private void btnStartRace_Click(object sender, EventArgs e)
+        {
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = (1000) * (1);              // Timer will tick every second
+            timer.Enabled = true;                       // Enable the timer
+            timer.Start();                              // Start the timer
+
+
+        }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            T.UpdatePosition();
+            H.UpdatePosition();
+            pictureBox1.Invalidate();
+
+            //winner not working yet
+            //only returns a bool value
+            T.IsWinner();
+            H.IsWinner();
         }
     }
 
