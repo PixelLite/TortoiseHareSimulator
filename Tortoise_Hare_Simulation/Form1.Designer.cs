@@ -38,16 +38,16 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(350, 300);
+            this.pictureBox1.Size = new System.Drawing.Size(700, 100);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
             // btnStartRace
             // 
-            this.btnStartRace.Location = new System.Drawing.Point(415, 34);
+            this.btnStartRace.Location = new System.Drawing.Point(284, 118);
             this.btnStartRace.Name = "btnStartRace";
             this.btnStartRace.Size = new System.Drawing.Size(75, 23);
             this.btnStartRace.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(496, 34);
+            this.btnReset.Location = new System.Drawing.Point(365, 118);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 2;
@@ -69,12 +69,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 375);
+            this.ClientSize = new System.Drawing.Size(728, 219);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnStartRace);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Tortoise and Hare Race";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
