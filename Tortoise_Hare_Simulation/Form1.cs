@@ -222,8 +222,8 @@ namespace Tortoise_Hare_Simulation
         {
             Pen myPen = new Pen(Color.Black);
 
-            float[] dashValues = { 10, 10, 10, 10 };
-            myPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            float[] dashValues = {10, 10};
+            myPen.DashPattern = dashValues;
             e.Graphics.DrawLine(myPen, 0, 70, 700, 70);
 
             H.Draw(e.Graphics);
