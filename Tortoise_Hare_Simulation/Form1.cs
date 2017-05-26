@@ -42,6 +42,8 @@ namespace Tortoise_Hare_Simulation
             protected int iNumberSteps;
             //color of contender
             protected Color Colour;
+            //counts # of wins
+            protected int iWinCount;
 
             //constructors
             public Contender()
@@ -100,14 +102,24 @@ namespace Tortoise_Hare_Simulation
             {
                 return iPosition;
             }
-
+            public void SetWinCount(int w)
+            {
+                iWinCount = w;
+            }
+            public int GetWinCount()
+            {
+                return iWinCount;
+            }
+            public void IncreaseWinCount()
+            {
+                iWinCount++;
+            }
             public bool IsWinner()
             {
                 if (iPosition >= iNumberSteps)
                     return true;
                 else
                     return false;
-
             }
             public bool DidYaBite (Contender Other )
             {
@@ -243,7 +255,7 @@ namespace Tortoise_Hare_Simulation
         private void btnStartRace_Click(object sender, EventArgs e)
         {
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = (1000) * (1);              // Timer will tick every second
+            timer.Interval = (500) * (1);              // Timer will tick every second
             timer.Enabled = true;                       // Enable the timer
             timer.Start();                              // Start the timer
 
@@ -271,11 +283,13 @@ namespace Tortoise_Hare_Simulation
             }
             else if (T.IsWinner()== true)
             {
+                T.IncreaseWinCount();
                 timer.Stop();
                 MessageBox.Show("TORTOISE WINS!!!!! YAY!!!!!");
             } 
             else if (H.IsWinner() == true)
             {
+                H.IncreaseWinCount();
                 timer.Stop();
                 MessageBox.Show("Hare wins. Booooo");
             }
@@ -290,6 +304,11 @@ namespace Tortoise_Hare_Simulation
             Reset();
             Invalidate();
             timer.Stop();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
