@@ -234,8 +234,25 @@ namespace Tortoise_Hare_Simulation
 
             //winner not working yet
             //only returns a bool value
-            T.IsWinner();
-            H.IsWinner();
+            if (T.IsWinner() == true && H.IsWinner() == true)
+            {
+                timer.Stop();
+                MessageBox.Show("It's a tie.");
+            }
+            else if (T.IsWinner()== true)
+            {
+                timer.Stop();
+                MessageBox.Show("TORTOISE WINS!!!!! YAY!!!!!");
+            } 
+            else if (H.IsWinner() == true)
+            {
+                timer.Stop();
+                MessageBox.Show("Hare wins. Booooo");
+            }
+            else
+            {
+
+            }
         }
     }
 
