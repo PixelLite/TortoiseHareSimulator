@@ -156,7 +156,7 @@ namespace Tortoise_Hare_Simulation
             public void Draw(Graphics g)
             {
                 SolidBrush myBrush = new SolidBrush(Colour);
-                g.FillEllipse(myBrush, iPosition * 15, 50, 15, 15);
+                g.FillEllipse(myBrush, iPosition * 10, 50, 10, 10);
             }
         }
 
@@ -214,7 +214,7 @@ namespace Tortoise_Hare_Simulation
             public void Draw(Graphics g)
             {
                 SolidBrush myBrush = new SolidBrush(Colour);
-                g.FillRectangle(myBrush, iPosition * 15, 50, 15, 15);
+                g.FillRectangle(myBrush, iPosition * 10, 50, 10, 10);
             }
         }
 
@@ -222,9 +222,10 @@ namespace Tortoise_Hare_Simulation
         {
             Pen myPen = new Pen(Color.Black);
 
-            float[] dashValues = { 15, 15, 15, 15 };
+            float[] dashValues = { 10, 10, 10, 10 };
             myPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            e.Graphics.DrawLine(myPen, 0, 70, 1050, 70);
+            e.Graphics.DrawLine(myPen, 0, 70, 700, 70);
+
             H.Draw(e.Graphics);
             T.Draw(e.Graphics);
         }
