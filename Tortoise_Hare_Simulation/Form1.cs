@@ -24,6 +24,16 @@ namespace Tortoise_Hare_Simulation
         Tortoise T = new Tortoise();
         Hare H = new Hare();
 
+        public void Reset()
+        {
+            //Reset hare 
+            H.setiPosition(0);
+
+            //Reset tortoise
+            T.setiPosition(0);
+
+        }
+
         public class Contender
         {
             //position # of contender
@@ -259,6 +269,13 @@ namespace Tortoise_Hare_Simulation
             {
 
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Reset();
+            timer.Stop();
+            Invalidate();
         }
     }
 
