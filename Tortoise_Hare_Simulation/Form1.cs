@@ -113,6 +113,7 @@ namespace Tortoise_Hare_Simulation
             public void IncreaseWinCount()
             {
                 iWinCount++;
+                
             }
             public bool IsWinner()
             {
@@ -135,13 +136,14 @@ namespace Tortoise_Hare_Simulation
         public class Tortoise : Contender
         {
 
-            Random r=new Random();
+            Random r;
             
             public Tortoise()
             {
                 iPosition = 0;
                 iNumberSteps = 70;
                 Colour = Color.OrangeRed;
+                r = new Random();
             }
 
             public Tortoise(int position, int numbersteps, Color c)
@@ -149,6 +151,7 @@ namespace Tortoise_Hare_Simulation
                 setiPosition(position);
                 setiNumberSteps(numbersteps);
                 setColour(c);
+                r = new Random();
             }
 
             public void UpdatePosition()
@@ -182,13 +185,14 @@ namespace Tortoise_Hare_Simulation
 
         public class Hare : Contender
         {
-            Random r = new Random();
+            Random r;
 
             public Hare()
             {
                 iPosition = 0;
                 iNumberSteps = 70;
                 Colour = Color.OrangeRed;
+                r=new Random();
             }
 
             public Hare(int position, int numbersteps, Color c)
@@ -196,6 +200,7 @@ namespace Tortoise_Hare_Simulation
                 setiPosition(position);
                 setiNumberSteps(numbersteps);
                 setColour(c);
+                r=new Random();
             }
 
             public void UpdatePosition()
@@ -270,7 +275,7 @@ namespace Tortoise_Hare_Simulation
 
             if (T.DidYaBite(H) == true)
             {
-                MessageBox.Show("OUCH");
+                lboxCommentary.Items.Add("OUCH");
 
             }
             
@@ -279,19 +284,21 @@ namespace Tortoise_Hare_Simulation
             if (T.IsWinner() == true && H.IsWinner() == true)
             {
                 timer.Stop();
-                MessageBox.Show("It's a tie.");
+                lboxCommentary.Items.Add("It's a tie.");
             }
             else if (T.IsWinner()== true)
             {
                 T.IncreaseWinCount();
+                lblScoreT.Text = T.GetWinCount().ToString();
                 timer.Stop();
-                MessageBox.Show("TORTOISE WINS!!!!! YAY!!!!!");
+                lboxCommentary.Items.Add("TORTOISE WINS!!!!! YAY!!!!!");
             } 
             else if (H.IsWinner() == true)
             {
                 H.IncreaseWinCount();
+                lblScoreH.Text = H.GetWinCount().ToString();
                 timer.Stop();
-                MessageBox.Show("Hare wins. Booooo");
+                lboxCommentary.Items.Add("Hare wins. Booooo");
             }
             else
             {
@@ -302,7 +309,7 @@ namespace Tortoise_Hare_Simulation
         private void btnReset_Click(object sender, EventArgs e)
         {
             Reset();
-            Invalidate();
+            pictureBox1.Invalidate();
             timer.Stop();
         }
 
