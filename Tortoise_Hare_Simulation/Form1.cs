@@ -33,6 +33,15 @@ namespace Tortoise_Hare_Simulation
             T.setiPosition(0);
 
         }
+        public void NewGame()
+        {
+            H.setiPosition(0);
+            H.SetWinCount(0);
+
+            T.setiPosition(0);
+            T.SetWinCount(0);
+            
+        }
 
         public class Contender
         {
@@ -256,15 +265,14 @@ namespace Tortoise_Hare_Simulation
             T.Draw(e.Graphics);
         }
 
-        
-
         private void btnStartRace_Click(object sender, EventArgs e)
         {
             timer.Tick += new EventHandler(timer_Tick);
             timer.Interval = 1000 / trckSpeed.Value;    // Timer speed changes with trckspeed bar
             timer.Enabled = true;                       // Enable the timer
             timer.Start();                              // Start the timer
-
+            btnStartRace.Hide();
+            btnPause.Visible = true;
 
         }
 
@@ -310,13 +318,29 @@ namespace Tortoise_Hare_Simulation
         {
             Reset();
             pictureBox1.Invalidate();
-            timer.Tick -= new EventHandler(timer_Tick);
             timer.Stop();
+            timer.Tick -= new EventHandler(timer_Tick);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            NewGame();
+            pictureBox1.Invalidate();
+            timer.Stop();
+            timer.Tick -= new EventHandler(timer_Tick);
+        }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            timer.Tick -= new EventHandler(timer_Tick);
+            btnPause.Hide();
+            btnStartRace.Visible = true;
         }
     }
 

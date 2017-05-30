@@ -41,6 +41,8 @@
             this.lboxCommentary = new System.Windows.Forms.ListBox();
             this.trckSpeed = new System.Windows.Forms.TrackBar();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNewGame = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trckSpeed)).BeginInit();
@@ -57,7 +59,7 @@
             // 
             // btnStartRace
             // 
-            this.btnStartRace.Location = new System.Drawing.Point(293, 118);
+            this.btnStartRace.Location = new System.Drawing.Point(208, 118);
             this.btnStartRace.Name = "btnStartRace";
             this.btnStartRace.Size = new System.Drawing.Size(75, 23);
             this.btnStartRace.TabIndex = 1;
@@ -148,11 +150,32 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Speed";
             // 
+            // btnNewGame
+            // 
+            this.btnNewGame.Location = new System.Drawing.Point(289, 118);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(75, 23);
+            this.btnNewGame.TabIndex = 8;
+            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+            // 
+            // btnPause
+            // 
+            this.btnPause.Location = new System.Drawing.Point(208, 118);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(75, 23);
+            this.btnPause.TabIndex = 9;
+            this.btnPause.Text = "Pause";
+            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 269);
+            this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.trckSpeed);
             this.Controls.Add(this.lboxCommentary);
@@ -160,6 +183,7 @@
             this.Controls.Add(this.btnStartRace);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnPause);
             this.Name = "Form1";
             this.Text = "Tortoise and Hare Race";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -186,6 +210,8 @@
         private System.Windows.Forms.ListBox lboxCommentary;
         private System.Windows.Forms.TrackBar trckSpeed;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Button btnPause;
     }
 }
 
