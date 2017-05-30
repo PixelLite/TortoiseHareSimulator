@@ -39,7 +39,11 @@
             this.lblScoreH = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lboxCommentary = new System.Windows.Forms.ListBox();
+            this.trckSpeed = new System.Windows.Forms.TrackBar();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trckSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -126,11 +130,31 @@
             this.lboxCommentary.Size = new System.Drawing.Size(120, 69);
             this.lboxCommentary.TabIndex = 5;
             // 
+            // trckSpeed
+            // 
+            this.trckSpeed.Location = new System.Drawing.Point(479, 212);
+            this.trckSpeed.Minimum = 1;
+            this.trckSpeed.Name = "trckSpeed";
+            this.trckSpeed.Size = new System.Drawing.Size(104, 45);
+            this.trckSpeed.TabIndex = 6;
+            this.trckSpeed.Value = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(479, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Speed";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 219);
+            this.ClientSize = new System.Drawing.Size(728, 269);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.trckSpeed);
             this.Controls.Add(this.lboxCommentary);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnStartRace);
@@ -142,7 +166,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trckSpeed)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -158,6 +184,8 @@
         private System.Windows.Forms.Label lblScoreH;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lboxCommentary;
+        private System.Windows.Forms.TrackBar trckSpeed;
+        private System.Windows.Forms.Label label2;
     }
 }
 

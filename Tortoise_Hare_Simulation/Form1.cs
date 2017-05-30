@@ -261,7 +261,7 @@ namespace Tortoise_Hare_Simulation
         private void btnStartRace_Click(object sender, EventArgs e)
         {
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = (500) * (1);              // Timer will tick every second
+            timer.Interval = 1000 / trckSpeed.Value;    // Timer speed changes with trckspeed bar
             timer.Enabled = true;                       // Enable the timer
             timer.Start();                              // Start the timer
 
@@ -288,14 +288,14 @@ namespace Tortoise_Hare_Simulation
             }
             else if (T.IsWinner()== true)
             {
-                T.IncreaseWinCount();
+                T.SetWinCount(T.GetWinCount() + 1);
                 lblScoreT.Text = T.GetWinCount().ToString();
                 timer.Stop();
                 lboxCommentary.Items.Add("TORTOISE WINS!!!!! YAY!!!!!");
             } 
             else if (H.IsWinner() == true)
             {
-                H.IncreaseWinCount();
+                H.SetWinCount(H.GetWinCount() + 1);
                 lblScoreH.Text = H.GetWinCount().ToString();
                 timer.Stop();
                 lboxCommentary.Items.Add("Hare wins. Booooo");
@@ -310,6 +310,7 @@ namespace Tortoise_Hare_Simulation
         {
             Reset();
             pictureBox1.Invalidate();
+            timer.Tick -= new EventHandler(timer_Tick);
             timer.Stop();
         }
 
