@@ -83,12 +83,12 @@ namespace Tortoise_Hare_Simulation
                 else
                     iNumberSteps = steps;
             }
-            public int GetiNumberSteps()
+            public int  GetiNumberSteps()
             {
                 return iNumberSteps;
             }
 
-            public void setColour(Color c)
+            public void  setColour(Color c)
             {
                 Colour = c;
             }
@@ -107,18 +107,20 @@ namespace Tortoise_Hare_Simulation
 
 
             }
-            public int GetiPosition()
+            public int  GetiPosition()
             {
                 return iPosition;
             }
+
             public void SetWinCount(int w)
             {
                 iWinCount = w;
             }
-            public int GetWinCount()
+            public int  GetWinCount()
             {
                 return iWinCount;
             }
+
             public void IncreaseWinCount()
             {
                 iWinCount++;
@@ -140,7 +142,6 @@ namespace Tortoise_Hare_Simulation
                     return false;
                 
             }
-
         }
 
         public class Tortoise : Contender
@@ -292,6 +293,7 @@ namespace Tortoise_Hare_Simulation
             if (T.IsWinner() == true && H.IsWinner() == true)
             {
                 timer.Stop();
+                btnStartRace.Visible = true;
                 lboxCommentary.Items.Add("It's a tie.");
             }
             else if (T.IsWinner()== true)
@@ -299,6 +301,7 @@ namespace Tortoise_Hare_Simulation
                 T.SetWinCount(T.GetWinCount() + 1);
                 lblScoreT.Text = T.GetWinCount().ToString();
                 timer.Stop();
+                btnStartRace.Visible = true;
                 lboxCommentary.Items.Add("TORTOISE WINS!!!!! YAY!!!!!");
             } 
             else if (H.IsWinner() == true)
@@ -306,6 +309,7 @@ namespace Tortoise_Hare_Simulation
                 H.SetWinCount(H.GetWinCount() + 1);
                 lblScoreH.Text = H.GetWinCount().ToString();
                 timer.Stop();
+                btnStartRace.Visible = true;
                 lboxCommentary.Items.Add("Hare wins. Booooo");
             }
             else
