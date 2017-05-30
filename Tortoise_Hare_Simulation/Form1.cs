@@ -320,6 +320,7 @@ namespace Tortoise_Hare_Simulation
             pictureBox1.Invalidate();
             timer.Stop();
             timer.Tick -= new EventHandler(timer_Tick);
+            btnStartRace.Visible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
