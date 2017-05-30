@@ -40,7 +40,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lboxCommentary = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1

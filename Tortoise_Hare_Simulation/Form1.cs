@@ -122,6 +122,7 @@ namespace Tortoise_Hare_Simulation
                 else
                     return false;
             }
+
             public bool DidYaBite (Contender Other )
             {
                 if (this.iPosition == Other.iPosition)
@@ -279,8 +280,7 @@ namespace Tortoise_Hare_Simulation
 
             }
             
-            //winner not working yet
-            //only returns a bool value
+            
             if (T.IsWinner() == true && H.IsWinner() == true)
             {
                 timer.Stop();
