@@ -25,7 +25,7 @@ namespace Tortoise_Hare_Simulation
         Tortoise T = new Tortoise();
         Hare H = new Hare();
 
-        public void Reset()
+        public void NewGame()
         {
             //Reset hare 
             H.setiPosition(0);
@@ -34,7 +34,7 @@ namespace Tortoise_Hare_Simulation
             T.setiPosition(0);
 
         }
-        public void NewGame()
+        public void Reset()
         {
             H.setiPosition(0);
             H.SetWinCount(0);
@@ -133,6 +133,21 @@ namespace Tortoise_Hare_Simulation
                     return true;
                 else
                     return false;
+            }
+            public void CheckOutofBounds()
+            {
+                if (iPosition > iNumberSteps)
+                {
+                    iPosition = iNumberSteps;
+                }
+                else if (iPosition < 0)
+                {
+                    iPosition = 0;
+                }
+                else
+                {
+
+                }
             }
 
             public bool DidYaBite (Contender Other )
@@ -282,6 +297,7 @@ namespace Tortoise_Hare_Simulation
         {
             T.UpdatePosition();
             H.UpdatePosition();
+
             pictureBox1.Invalidate();
 
             if (T.DidYaBite(H) == true)
@@ -289,8 +305,10 @@ namespace Tortoise_Hare_Simulation
                 lboxCommentary.Items.Add("OUCH");
 
             }
-            
-            
+
+            T.CheckOutofBounds();
+            H.CheckOutofBounds();
+
             if (T.IsWinner() == true && H.IsWinner() == true)
             {
                 timer.Stop();
@@ -321,7 +339,7 @@ namespace Tortoise_Hare_Simulation
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            Reset();
+            NewGame();
             pictureBox1.Invalidate();
             timer.Stop();
             timer.Tick -= new EventHandler(timer_Tick);
@@ -335,7 +353,7 @@ namespace Tortoise_Hare_Simulation
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            NewGame();
+            Reset();
             pictureBox1.Invalidate();
             timer.Stop();
             timer.Tick -= new EventHandler(timer_Tick);
