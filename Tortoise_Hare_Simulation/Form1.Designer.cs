@@ -105,8 +105,9 @@
             this.lblScoreT.AutoSize = true;
             this.lblScoreT.Location = new System.Drawing.Point(54, 21);
             this.lblScoreT.Name = "lblScoreT";
-            this.lblScoreT.Size = new System.Drawing.Size(0, 13);
+            this.lblScoreT.Size = new System.Drawing.Size(13, 13);
             this.lblScoreT.TabIndex = 3;
+            this.lblScoreT.Text = "0";
             // 
             // label3
             // 
@@ -122,8 +123,9 @@
             this.lblScoreH.AutoSize = true;
             this.lblScoreH.Location = new System.Drawing.Point(42, 39);
             this.lblScoreH.Name = "lblScoreH";
-            this.lblScoreH.Size = new System.Drawing.Size(0, 13);
+            this.lblScoreH.Size = new System.Drawing.Size(13, 13);
             this.lblScoreH.TabIndex = 3;
+            this.lblScoreH.Text = "0";
             // 
             // groupBox1
             // 
