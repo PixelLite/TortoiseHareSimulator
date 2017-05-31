@@ -24,25 +24,7 @@ namespace Tortoise_Hare_Simulation
         Timer timer = new Timer();
         Tortoise T = new Tortoise();
         Hare H = new Hare();
-
-        public void NewGame()
-        {
-            //Reset hare 
-            H.setiPosition(0);
-
-            //Reset tortoise
-            T.setiPosition(0);
-
-        }
-        public void Reset()
-        {
-            H.setiPosition(0);
-            H.SetWinCount(0);
-
-            T.setiPosition(0);
-            T.SetWinCount(0);
-            
-        }
+      
 
         public class Contender
         {
@@ -355,7 +337,10 @@ namespace Tortoise_Hare_Simulation
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            NewGame();
+            //Resets current simulation but keeps current score
+            
+            H.setiPosition(0);
+            T.setiPosition(0);
             pictureBox1.Invalidate();
             timer.Stop();
             timer.Tick -= new EventHandler(timer_Tick);
@@ -369,7 +354,17 @@ namespace Tortoise_Hare_Simulation
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            Reset();
+            //New simulation, new score
+
+            H.setiPosition(0);
+            H.SetWinCount(0);
+            lblScoreH.Text = 0.ToString();
+
+            T.setiPosition(0);
+            T.SetWinCount(0);
+            lblScoreT.Text = 0.ToString();
+
+            lboxCommentary.Items.Clear();
             pictureBox1.Invalidate();
             timer.Stop();
             timer.Tick -= new EventHandler(timer_Tick);
