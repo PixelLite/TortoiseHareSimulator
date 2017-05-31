@@ -54,12 +54,14 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textFileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.binaryFileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trckSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Tortoise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Hare)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -267,11 +269,22 @@
             this.binaryFileToolStripMenuItem1.Text = "Binary File";
             this.binaryFileToolStripMenuItem1.Click += new System.EventHandler(this.binaryFileToolStripMenuItem1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(722, 63);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 26);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 272);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.picbox_Hare);
             this.Controls.Add(this.picbox_Tortoise);
             this.Controls.Add(this.btnNewGame);
@@ -296,6 +309,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Hare)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,6 +341,7 @@
         private System.Windows.Forms.ToolStripMenuItem binaryFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textFileToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem binaryFileToolStripMenuItem1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

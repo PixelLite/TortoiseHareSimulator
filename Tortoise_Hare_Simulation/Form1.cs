@@ -513,6 +513,11 @@ namespace Tortoise_Hare_Simulation
                 MessageBox.Show("ERROR. TRY AGAIN!");
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     
