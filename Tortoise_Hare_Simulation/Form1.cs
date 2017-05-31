@@ -461,6 +461,9 @@ namespace Tortoise_Hare_Simulation
                     T.SetWinCount(Convert.ToInt32(tr.ReadLine()));
                     H.SetWinCount(Convert.ToInt32(tr.ReadLine()));
 
+                    lblScoreT.Text = T.GetWinCount().ToString();
+                    lblScoreH.Text = H.GetWinCount().ToString();
+
                     //closes stream
                     tr.Close();
 
@@ -505,6 +508,8 @@ namespace Tortoise_Hare_Simulation
                         H.SetWinCount(binReader.ReadInt32());
                     }
                     binReader.Close();
+                    lblScoreT.Text = T.GetWinCount().ToString();
+                    lblScoreH.Text = H.GetWinCount().ToString();
                 }
             }
             catch
