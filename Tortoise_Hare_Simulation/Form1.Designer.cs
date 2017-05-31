@@ -184,71 +184,6 @@
             this.btnPause.UseVisualStyleBackColor = true;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(728, 24);
-            this.menuStrip1.TabIndex = 10;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveAsToolStripMenuItem,
-            this.openToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // saveAsToolStripMenuItem
-            // 
-            this.saveAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.textFileToolStripMenuItem,
-            this.binaryFileToolStripMenuItem});
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveAsToolStripMenuItem.Text = "Save As...";
-            // 
-            // textFileToolStripMenuItem
-            // 
-            this.textFileToolStripMenuItem.Name = "textFileToolStripMenuItem";
-            this.textFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.textFileToolStripMenuItem.Text = "Text File";
-            this.textFileToolStripMenuItem.Click += new System.EventHandler(this.textFileToolStripMenuItem_Click);
-            // 
-            // binaryFileToolStripMenuItem
-            // 
-            this.binaryFileToolStripMenuItem.Name = "binaryFileToolStripMenuItem";
-            this.binaryFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.binaryFileToolStripMenuItem.Text = "Binary File";
-            this.binaryFileToolStripMenuItem.Click += new System.EventHandler(this.binaryFileToolStripMenuItem_Click);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.textFileToolStripMenuItem1,
-            this.binaryFileToolStripMenuItem1});
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            // 
-            // textFileToolStripMenuItem1
-            // 
-            this.textFileToolStripMenuItem1.Name = "textFileToolStripMenuItem1";
-            this.textFileToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.textFileToolStripMenuItem1.Text = "Text File";
-            this.textFileToolStripMenuItem1.Click += new System.EventHandler(this.textFileToolStripMenuItem1_Click);
-            // 
-            // binaryFileToolStripMenuItem1
-            // 
-            this.binaryFileToolStripMenuItem1.Name = "binaryFileToolStripMenuItem1";
-            this.binaryFileToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.binaryFileToolStripMenuItem1.Text = "Binary File";
-            this.binaryFileToolStripMenuItem1.Click += new System.EventHandler(this.binaryFileToolStripMenuItem1_Click);
-            // 
             // picbox_Tortoise
             // 
             this.picbox_Tortoise.Image = ((System.Drawing.Image)(resources.GetObject("picbox_Tortoise.Image")));
@@ -267,11 +202,76 @@
             this.picbox_Hare.TabIndex = 11;
             this.picbox_Hare.TabStop = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(755, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveAsToolStripMenuItem,
+            this.openToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.textFileToolStripMenuItem,
+            this.binaryFileToolStripMenuItem});
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.saveAsToolStripMenuItem.Text = "Save As...";
+            // 
+            // textFileToolStripMenuItem
+            // 
+            this.textFileToolStripMenuItem.Name = "textFileToolStripMenuItem";
+            this.textFileToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.textFileToolStripMenuItem.Text = "Text File";
+            this.textFileToolStripMenuItem.Click += new System.EventHandler(this.textFileToolStripMenuItem_Click);
+            // 
+            // binaryFileToolStripMenuItem
+            // 
+            this.binaryFileToolStripMenuItem.Name = "binaryFileToolStripMenuItem";
+            this.binaryFileToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.binaryFileToolStripMenuItem.Text = "Binary File";
+            this.binaryFileToolStripMenuItem.Click += new System.EventHandler(this.binaryFileToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.textFileToolStripMenuItem1,
+            this.binaryFileToolStripMenuItem1});
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            // 
+            // textFileToolStripMenuItem1
+            // 
+            this.textFileToolStripMenuItem1.Name = "textFileToolStripMenuItem1";
+            this.textFileToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.textFileToolStripMenuItem1.Text = "Text File";
+            this.textFileToolStripMenuItem1.Click += new System.EventHandler(this.textFileToolStripMenuItem1_Click);
+            // 
+            // binaryFileToolStripMenuItem1
+            // 
+            this.binaryFileToolStripMenuItem1.Name = "binaryFileToolStripMenuItem1";
+            this.binaryFileToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.binaryFileToolStripMenuItem1.Text = "Binary File";
+            this.binaryFileToolStripMenuItem1.Click += new System.EventHandler(this.binaryFileToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 269);
+            this.ClientSize = new System.Drawing.Size(755, 347);
             this.Controls.Add(this.picbox_Hare);
             this.Controls.Add(this.picbox_Tortoise);
             this.Controls.Add(this.btnNewGame);
@@ -292,10 +292,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trckSpeed)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Tortoise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Hare)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
