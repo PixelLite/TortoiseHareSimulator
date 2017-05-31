@@ -357,6 +357,7 @@ namespace Tortoise_Hare_Simulation
             pictureBox1.Invalidate();
             timer.Stop();
             timer.Tick -= new EventHandler(timer_Tick);
+            btnStartRace.Visible = true; 
         }
 
         private void btnPause_Click(object sender, EventArgs e)
