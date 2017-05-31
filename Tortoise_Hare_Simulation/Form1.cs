@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Tortoise_Hare_Simulation
 {
@@ -380,6 +381,136 @@ namespace Tortoise_Hare_Simulation
             timer.Tick -= new EventHandler(timer_Tick);
             btnPause.Hide();
             btnStartRace.Visible = true;
+        }
+        
+        private void textFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filename;
+                SaveFileDialog SaveAs = new SaveFileDialog();
+                SaveAs.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                if (SaveAs.ShowDialog() == DialogResult.OK)
+                {
+                    filename = SaveAs.FileName;
+
+                    TextWriter tw = new StreamWriter(filename);
+                    tw.WriteLine(DateTime.Now);
+
+                    tw.WriteLine(Convert.ToString(T.GetWinCount()));
+                    tw.WriteLine(Convert.ToString(H.GetWinCount()));
+
+                    tw.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: Invalid file input.");
+            }
+        }
+
+        private void binaryFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filename;
+                SaveFileDialog SaveAsBinary = new SaveFileDialog();
+                SaveAsBinary.Filter = "bin files (*.bin)|*.bin|All files (*.*)|*.*";
+
+                if (SaveAsBinary.ShowDialog() == DialogResult.OK)
+                {
+                    filename = SaveAsBinary.FileName;
+                    FileStream fs = new FileStream(filename, FileMode.Create);
+
+                    BinaryWriter binWriter = new BinaryWriter(fs);
+                    binWriter.Write(DateTime.Now.ToString());
+                    //writes the timestamp at the top
+
+                    binWriter.Write(T.GetWinCount());
+                    binWriter.Write(H.GetWinCount());
+
+                    binWriter.Flush();
+                    binWriter.Close();
+                    //closes binWriter
+
+
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("ERROR! TRY AGAIN!");
+            }
+        }
+
+        private void textFileToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filename;
+                OpenFileDialog Open = new OpenFileDialog();
+                Open.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                if (Open.ShowDialog() == DialogResult.OK)
+                {
+                    filename = Open.FileName;
+                    TextReader tr = new StreamReader(filename);
+                    
+                    MessageBox.Show("This file was created at " + tr.ReadLine());
+
+                    T.SetWinCount(Convert.ToInt32(tr.ReadLine()));
+                    H.SetWinCount(Convert.ToInt32(tr.ReadLine()));
+
+                    //closes stream
+                    tr.Close();
+
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("ERROR! TRY AGAIN!");
+            }
+        }
+
+        private void binaryFileToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filename;
+                long length;
+                OpenFileDialog OpenBinary = new OpenFileDialog();
+                OpenBinary.Filter = "bin files (*.bin)|*.bin|All files (*.*)|*.*";
+
+                if (OpenBinary.ShowDialog() == DialogResult.OK)
+                {
+                    // It creates a new BinaryReader.
+                    filename = OpenBinary.FileName;
+                    FileStream fs = new FileStream(filename, FileMode.Open);
+                    BinaryReader binReader = new BinaryReader(fs);
+
+                    //It uses position and length variables.
+                    // These two variables store the position in the binary file we are,
+                    // and also the total size of the binary file.
+                    length = binReader.BaseStream.Length;
+                    
+                    MessageBox.Show("This file was created at " + Convert.ToDateTime(binReader.ReadString()));
+                    //shows the time the file was created in a message box
+
+
+                    while (fs.Position < length)
+                    {
+                        T.SetWinCount(binReader.ReadInt32());
+                        H.SetWinCount(binReader.ReadInt32());
+                    }
+                    binReader.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR. TRY AGAIN!");
+            }
         }
     }
 
