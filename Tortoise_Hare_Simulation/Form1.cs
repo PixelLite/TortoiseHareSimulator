@@ -282,16 +282,16 @@ namespace Tortoise_Hare_Simulation
             Point pTort;
 
             pTort = new Point();
-            pTort.X = T.GetiPosition() * 10;
-            pTort.Y = 59;
+            pTort.X = T.GetiPosition() * 10 + 12;
+            pTort.Y = 85;
             picbox_Tortoise.Location = pTort;
 
             //Changes position of hare graphic
             Point pHare;
 
             pHare = new Point();
-            pHare.X = H.GetiPosition() * 10;
-            pHare.Y = 27;
+            pHare.X = H.GetiPosition() * 10 + 12;
+            pHare.Y = 49;
             picbox_Hare.Location = pHare;
 
             //H.Draw(e.Graphics);

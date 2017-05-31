@@ -64,7 +64,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 105);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(726, 100);
             this.pictureBox1.TabIndex = 0;
@@ -73,7 +73,7 @@
             // 
             // btnStartRace
             // 
-            this.btnStartRace.Location = new System.Drawing.Point(204, 211);
+            this.btnStartRace.Location = new System.Drawing.Point(204, 141);
             this.btnStartRace.Name = "btnStartRace";
             this.btnStartRace.Size = new System.Drawing.Size(75, 23);
             this.btnStartRace.TabIndex = 1;
@@ -83,7 +83,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(370, 211);
+            this.btnReset.Location = new System.Drawing.Point(370, 141);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 2;
@@ -131,7 +131,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblScoreT);
-            this.groupBox1.Location = new System.Drawing.Point(475, 211);
+            this.groupBox1.Location = new System.Drawing.Point(475, 141);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(108, 70);
             this.groupBox1.TabIndex = 4;
@@ -141,14 +141,14 @@
             // lboxCommentary
             // 
             this.lboxCommentary.FormattingEnabled = true;
-            this.lboxCommentary.Location = new System.Drawing.Point(12, 211);
+            this.lboxCommentary.Location = new System.Drawing.Point(12, 141);
             this.lboxCommentary.Name = "lboxCommentary";
             this.lboxCommentary.Size = new System.Drawing.Size(120, 69);
             this.lboxCommentary.TabIndex = 5;
             // 
             // trckSpeed
             // 
-            this.trckSpeed.Location = new System.Drawing.Point(475, 305);
+            this.trckSpeed.Location = new System.Drawing.Point(475, 232);
             this.trckSpeed.Minimum = 1;
             this.trckSpeed.Name = "trckSpeed";
             this.trckSpeed.Size = new System.Drawing.Size(104, 45);
@@ -158,7 +158,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(475, 286);
+            this.label2.Location = new System.Drawing.Point(475, 216);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 7;
@@ -166,7 +166,7 @@
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(285, 211);
+            this.btnNewGame.Location = new System.Drawing.Point(285, 141);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(75, 23);
             this.btnNewGame.TabIndex = 8;
@@ -176,7 +176,7 @@
             // 
             // btnPause
             // 
-            this.btnPause.Location = new System.Drawing.Point(204, 211);
+            this.btnPause.Location = new System.Drawing.Point(204, 141);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(75, 23);
             this.btnPause.TabIndex = 9;
@@ -184,13 +184,31 @@
             this.btnPause.UseVisualStyleBackColor = true;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
+            // picbox_Tortoise
+            // 
+            this.picbox_Tortoise.Image = ((System.Drawing.Image)(resources.GetObject("picbox_Tortoise.Image")));
+            this.picbox_Tortoise.Location = new System.Drawing.Point(13, 85);
+            this.picbox_Tortoise.Name = "picbox_Tortoise";
+            this.picbox_Tortoise.Size = new System.Drawing.Size(24, 17);
+            this.picbox_Tortoise.TabIndex = 10;
+            this.picbox_Tortoise.TabStop = false;
+            // 
+            // picbox_Hare
+            // 
+            this.picbox_Hare.Image = ((System.Drawing.Image)(resources.GetObject("picbox_Hare.Image")));
+            this.picbox_Hare.Location = new System.Drawing.Point(12, 49);
+            this.picbox_Hare.Name = "picbox_Hare";
+            this.picbox_Hare.Size = new System.Drawing.Size(24, 17);
+            this.picbox_Hare.TabIndex = 11;
+            this.picbox_Hare.TabStop = false;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(728, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(754, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -215,14 +233,14 @@
             // textFileToolStripMenuItem
             // 
             this.textFileToolStripMenuItem.Name = "textFileToolStripMenuItem";
-            this.textFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.textFileToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.textFileToolStripMenuItem.Text = "Text File";
             this.textFileToolStripMenuItem.Click += new System.EventHandler(this.textFileToolStripMenuItem_Click);
             // 
             // binaryFileToolStripMenuItem
             // 
             this.binaryFileToolStripMenuItem.Name = "binaryFileToolStripMenuItem";
-            this.binaryFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.binaryFileToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.binaryFileToolStripMenuItem.Text = "Binary File";
             this.binaryFileToolStripMenuItem.Click += new System.EventHandler(this.binaryFileToolStripMenuItem_Click);
             // 
@@ -238,40 +256,22 @@
             // textFileToolStripMenuItem1
             // 
             this.textFileToolStripMenuItem1.Name = "textFileToolStripMenuItem1";
-            this.textFileToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.textFileToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.textFileToolStripMenuItem1.Text = "Text File";
             this.textFileToolStripMenuItem1.Click += new System.EventHandler(this.textFileToolStripMenuItem1_Click);
             // 
             // binaryFileToolStripMenuItem1
             // 
             this.binaryFileToolStripMenuItem1.Name = "binaryFileToolStripMenuItem1";
-            this.binaryFileToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.binaryFileToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.binaryFileToolStripMenuItem1.Text = "Binary File";
             this.binaryFileToolStripMenuItem1.Click += new System.EventHandler(this.binaryFileToolStripMenuItem1_Click);
-            // 
-            // picbox_Tortoise
-            // 
-            this.picbox_Tortoise.Image = ((System.Drawing.Image)(resources.GetObject("picbox_Tortoise.Image")));
-            this.picbox_Tortoise.Location = new System.Drawing.Point(16, 59);
-            this.picbox_Tortoise.Name = "picbox_Tortoise";
-            this.picbox_Tortoise.Size = new System.Drawing.Size(24, 17);
-            this.picbox_Tortoise.TabIndex = 10;
-            this.picbox_Tortoise.TabStop = false;
-            // 
-            // picbox_Hare
-            // 
-            this.picbox_Hare.Image = ((System.Drawing.Image)(resources.GetObject("picbox_Hare.Image")));
-            this.picbox_Hare.Location = new System.Drawing.Point(16, 27);
-            this.picbox_Hare.Name = "picbox_Hare";
-            this.picbox_Hare.Size = new System.Drawing.Size(24, 17);
-            this.picbox_Hare.TabIndex = 11;
-            this.picbox_Hare.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 269);
+            this.ClientSize = new System.Drawing.Size(754, 272);
             this.Controls.Add(this.picbox_Hare);
             this.Controls.Add(this.picbox_Tortoise);
             this.Controls.Add(this.btnNewGame);
@@ -292,10 +292,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trckSpeed)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Tortoise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Hare)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
