@@ -282,12 +282,12 @@ namespace Tortoise_Hare_Simulation
 
         private void btnStartRace_Click(object sender, EventArgs e)
         {
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = 1000 / trckSpeed.Value;    // Timer speed changes with trckspeed bar
-            timer.Enabled = true;                       // Enable the timer
-            timer.Start();                              // Start the timer
-            btnStartRace.Hide();
-            btnPause.Visible = true;
+                timer.Tick += new EventHandler(timer_Tick);
+                timer.Interval = 1000 / trckSpeed.Value;    // Timer speed changes with trckspeed bar
+                timer.Enabled = true;                       // Enable the timer
+                timer.Start();                              // Start the timer
+                btnStartRace.Hide();
+                btnPause.Visible = true;
 
         }
 
@@ -312,6 +312,8 @@ namespace Tortoise_Hare_Simulation
                 timer.Stop();
                 btnStartRace.Visible = true;
                 lboxCommentary.Items.Add("It's a tie.");
+                btnStartRace.Hide();
+                btnPause.Hide();
             }
             else if (T.IsWinner()== true)
             {
@@ -320,6 +322,8 @@ namespace Tortoise_Hare_Simulation
                 timer.Stop();
                 btnStartRace.Visible = true;
                 lboxCommentary.Items.Add("TORTOISE WINS!!!!! YAY!!!!!");
+                btnStartRace.Hide();
+                btnPause.Hide();
             } 
             else if (H.IsWinner() == true)
             {
@@ -328,6 +332,8 @@ namespace Tortoise_Hare_Simulation
                 timer.Stop();
                 btnStartRace.Visible = true;
                 lboxCommentary.Items.Add("Hare wins. Booooo");
+                btnStartRace.Hide();
+                btnPause.Hide();
             }
             else
             {
@@ -337,10 +343,16 @@ namespace Tortoise_Hare_Simulation
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            //Resets current simulation but keeps current score
-            
+            //Resets current simulation, wipes score
             H.setiPosition(0);
+            H.SetWinCount(0);
+            lblScoreH.Text = 0.ToString();
+
             T.setiPosition(0);
+            T.SetWinCount(0);
+            lblScoreT.Text = 0.ToString();
+
+            lboxCommentary.Items.Clear();
             pictureBox1.Invalidate();
             timer.Stop();
             timer.Tick -= new EventHandler(timer_Tick);
@@ -354,21 +366,13 @@ namespace Tortoise_Hare_Simulation
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            //New simulation, new score
-
+            //New simulation, keeps score
             H.setiPosition(0);
-            H.SetWinCount(0);
-            lblScoreH.Text = 0.ToString();
-
             T.setiPosition(0);
-            T.SetWinCount(0);
-            lblScoreT.Text = 0.ToString();
-
-            lboxCommentary.Items.Clear();
             pictureBox1.Invalidate();
             timer.Stop();
             timer.Tick -= new EventHandler(timer_Tick);
-            btnStartRace.Visible = true; 
+            btnStartRace.Visible = true;
         }
 
         private void btnPause_Click(object sender, EventArgs e)
