@@ -278,8 +278,24 @@ namespace Tortoise_Hare_Simulation
             myPen.DashPattern = dashValues;
             e.Graphics.DrawLine(myPen, 0, 70, 700, 70);
 
-            H.Draw(e.Graphics);
-            T.Draw(e.Graphics);
+            //Changes position of tortoise graphic
+            Point pTort;
+
+            pTort = new Point();
+            pTort.X = T.GetiPosition() * 10;
+            pTort.Y = 59;
+            picbox_Tortoise.Location = pTort;
+
+            //Changes position of hare graphic
+            Point pHare;
+
+            pHare = new Point();
+            pHare.X = H.GetiPosition() * 10;
+            pHare.Y = 27;
+            picbox_Hare.Location = pHare;
+
+            //H.Draw(e.Graphics);
+            //T.Draw(e.Graphics);
         }
 
         private void btnStartRace_Click(object sender, EventArgs e)

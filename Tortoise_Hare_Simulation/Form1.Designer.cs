@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnStartRace = new System.Windows.Forms.Button();
@@ -43,6 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.btnPause = new System.Windows.Forms.Button();
+            this.picbox_Tortoise = new System.Windows.Forms.PictureBox();
+            this.picbox_Hare = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +57,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trckSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_Tortoise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_Hare)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +66,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 105);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(700, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(726, 100);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -244,11 +249,31 @@
             this.binaryFileToolStripMenuItem1.Text = "Binary File";
             this.binaryFileToolStripMenuItem1.Click += new System.EventHandler(this.binaryFileToolStripMenuItem1_Click);
             // 
+            // picbox_Tortoise
+            // 
+            this.picbox_Tortoise.Image = ((System.Drawing.Image)(resources.GetObject("picbox_Tortoise.Image")));
+            this.picbox_Tortoise.Location = new System.Drawing.Point(16, 59);
+            this.picbox_Tortoise.Name = "picbox_Tortoise";
+            this.picbox_Tortoise.Size = new System.Drawing.Size(24, 17);
+            this.picbox_Tortoise.TabIndex = 10;
+            this.picbox_Tortoise.TabStop = false;
+            // 
+            // picbox_Hare
+            // 
+            this.picbox_Hare.Image = ((System.Drawing.Image)(resources.GetObject("picbox_Hare.Image")));
+            this.picbox_Hare.Location = new System.Drawing.Point(16, 27);
+            this.picbox_Hare.Name = "picbox_Hare";
+            this.picbox_Hare.Size = new System.Drawing.Size(24, 17);
+            this.picbox_Hare.TabIndex = 11;
+            this.picbox_Hare.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 320);
+            this.ClientSize = new System.Drawing.Size(754, 269);
+            this.Controls.Add(this.picbox_Hare);
+            this.Controls.Add(this.picbox_Tortoise);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.trckSpeed);
@@ -269,6 +294,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trckSpeed)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_Tortoise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_Hare)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +317,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.PictureBox picbox_Tortoise;
+        private System.Windows.Forms.PictureBox picbox_Hare;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
